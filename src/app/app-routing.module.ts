@@ -10,7 +10,16 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  }
+  },
+  {
+    path: 'students',
+    loadChildren: () => import('./pages/students/students.module').then( m => m.StudentsPageModule)
+  },
+  {
+    path: 'students/:id',
+    loadChildren: () => import('./pages/student/student.module').then( m =>
+    m.StudentPageModule)
+    }
 ];
 
 @NgModule({
